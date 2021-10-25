@@ -1,0 +1,14 @@
+kind: pipeline
+type: ssh
+name: default
+
+server:
+  host: 35.74.27.106
+  user: ubuntu
+  ssh_key:
+    from_secret: ssh_key
+
+steps:
+- name: greetings
+  commands:
+  - echo hello world
